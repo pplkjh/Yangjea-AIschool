@@ -1,9 +1,7 @@
-import elice_utils
 import matplotlib as mpl
 mpl.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-eu = elice_utils.EliceUtils()
 
 def loss(x, y, beta_0, beta_1):
     N = len(x)
@@ -44,5 +42,6 @@ plt.plot([0, 10], [beta_1, 10 * beta_0 + beta_1], c='r') # y = beta_0 * x + beta
 
 plt.xlim(0, 10) # 그래프의 X축을 설정합니다.
 plt.ylim(0, 10) # 그래프의 Y축을 설정합니다.
-plt.savefig("test.png") # 저장 후 엘리스에 이미지를 표시합니다.
-eu.send_image("test.png")
+# plt.savefig("test.png") # 저장 이미지
+plt.show()
+
